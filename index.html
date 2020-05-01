@@ -1796,10 +1796,10 @@ hr {
 <h3>Example App made with North</h3>
 <br>
 <p>Code:</p>
-<img src="carbon.png" style="height: 530px; border-radius: 5px;"></img>
+<img src="https://raw.githubusercontent.com/north-lang/north-lang.github.io/master/carbon.png" style="height: 530px; border-radius: 5px;"></img>
 <br></br>
 <p>Result:</p>
-<img src="screen.png" style="height: 390px; border-radius: 5px;"></img>
+<img src="https://raw.githubusercontent.com/north-lang/north-lang.github.io/master/screen.png" style="height: 390px; border-radius: 5px;"></img>
 </div>
 </br></br>
 
@@ -1808,45 +1808,6 @@ hr {
   <a href="github" style="text-align: center; color: dodgerblue; margin-left: 530px;">See technical documentation</a>
   <p style="margin-left: 500px;">north lang created by Timo Sarkar</p>
 </footer>
-
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script>
-jQuery(function($)
-{
-    $("#contact_form").submit(function()
-    {
-        var email = $("#email").val(); // get email field value
-        var msg = $("#msg").val(); // get message field value
-        $.ajax(
-        {
-            type: "POST",
-            url: "https://mandrillapp.com/api/1.0/messages/send.json",
-            data: {
-                'key': 'ISdRgmRsxJ_4wL7WPKiKnw',
-                'message': {
-                    'from_email': email,
-                    'subject': 'Forloop Contact Form',
-                    'text': msg,
-                    'to': [
-                    {
-                        'email': 'mmo_80@yahoo.se',
-                        'name': 'Forloop',
-                        'type': 'to'
-                    }]
-                }
-            }
-        })
-        .done(function(response) {
-            alert('Your message has been sent. Thank you!');
-            $("#email").val('');
-            $("#msg").val('');
-        })
-        .fail(function(response) {
-            alert('Error sending message.');
-        });
-        return false; // prevent page refresh
-    });
-});
-</script>
 </body>
 </html>
