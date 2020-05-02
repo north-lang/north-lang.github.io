@@ -1,1816 +1,1065 @@
-<html lang="en">
+<html>
 <head>
   <style>
-	  html {
-	  text-align: center;
-	  }
-  body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  color: #e1e1e1;
-  background-color: #30322f;
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,700|Bitter:400,700,400italic);
+* {
+  box-sizing: border-box;
 }
-
-p {
-  line-height: 150%;
-}
-
-h1.logotype {
-  text-align: center;
-  font-family: 'Gudea', sans-serif;
-  font-weight: 400;
-  line-height: 30%;
-  font-size: 95px;
-  color: #a3a3a3;
-  padding: 5px;
-}
-
-.logotype span {
-  color: #5488ad;
-}
-
-.bottom-center {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-h4 {
-  margin-top:10px;
-  line-height:0px;
-}
-
-/* ------------------------------------------ */
-
-
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-
-/**
- * Remove default margin.
- */
 
 body {
-  margin: 0;
+  color: #4c4e50;
+  font-family: "Lato", sans-serif;
+  background-color: #fafafa;
 }
 
-
-/* HTML5 display definitions
-   ========================================================================== */
-
-
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
-}
-
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-
-[hidden],
-template {
-  display: none;
-}
-
-
-/* Links
-   ========================================================================== */
-
-
-/**
- * Remove the gray background color from active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
-
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-
-/* Text-level semantics
-   ========================================================================== */
-
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-
-b,
-strong {
-  font-weight: bold;
-}
-
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-
-dfn {
-  font-style: italic;
-}
-
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-
-/**
- * Address styling not present in IE 8/9.
- */
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
-
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-
-/* Embedded content
-   ========================================================================== */
-
-
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-
-img {
-  border: 0;
-}
-
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-
-/* Grouping content
-   ========================================================================== */
-
-
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
-}
-
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-
-/* Forms
-   ========================================================================== */
-
-
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-
-
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-
-button {
-  overflow: visible;
-}
-
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-
-button,
-select {
-  text-transform: none;
-}
-
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-
-button,
-html input[type="button"],
-
-/* 1 */
-
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-
-/**
- * Re-set default cursor for disabled elements.
- */
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-
-input {
-  line-height: normal;
-}
-
-input, textarea {
-  color:#000000;
-}
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
-
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-
-/**
- * Define consistent border, margin, and padding.
- */
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-
-textarea {
-  overflow: auto;
-}
-
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-
-optgroup {
-  font-weight: bold;
-}
-
-
-/* Tables
-   ========================================================================== */
-
-
-/**
- * Remove most spacing between table cells.
- */
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
-
-
-
-
-
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-}
-
-
-/* For devices larger than 400px */
-
-@media (min-width: 500px) {
-  .container {
-    width: 85%;
-    padding: 0;
-  }
-}
-
-
-/* For devices larger than 550px */
-
-@media (min-width: 650px) {
-  .container {
-    width: 80%;
-  }
-  .column,
-  .columns {
-    margin-left: 4%;
-  }
-  .column:first-child,
-  .columns:first-child {
-    margin-left: 0;
-  }
-  .one.column,
-  .one.columns {
-    width: 4.66666666667%;
-  }
-  .two.columns {
-    width: 13.3333333333%;
-  }
-  .three.columns {
-    width: 22%;
-  }
-  .four.columns {
-    width: 30.6666666667%;
-  }
-  .five.columns {
-    width: 39.3333333333%;
-  }
-  .six.columns {
-    width: 48%;
-  }
-  .seven.columns {
-    width: 56.6666666667%;
-  }
-  .eight.columns {
-    width: 65.3333333333%;
-  }
-  .nine.columns {
-    width: 74.0%;
-  }
-  .ten.columns {
-    width: 82.6666666667%;
-  }
-  .eleven.columns {
-    width: 91.3333333333%;
-  }
-  .twelve.columns {
-    width: 100%;
-    margin-left: 0;
-  }
-  .one-third.column {
-    width: 30.6666666667%;
-  }
-  .two-thirds.column {
-    width: 65.3333333333%;
-  }
-  .one-half.column {
-    width: 48%;
-  }
-  /* Offsets */
-  .offset-by-one.column,
-  .offset-by-one.columns {
-    margin-left: 8.66666666667%;
-  }
-  .offset-by-two.column,
-  .offset-by-two.columns {
-    margin-left: 17.3333333333%;
-  }
-  .offset-by-three.column,
-  .offset-by-three.columns {
-    margin-left: 26%;
-  }
-  .offset-by-four.column,
-  .offset-by-four.columns {
-    margin-left: 34.6666666667%;
-  }
-  .offset-by-five.column,
-  .offset-by-five.columns {
-    margin-left: 43.3333333333%;
-  }
-  .offset-by-six.column,
-  .offset-by-six.columns {
-    margin-left: 52%;
-  }
-  .offset-by-seven.column,
-  .offset-by-seven.columns {
-    margin-left: 60.6666666667%;
-  }
-  .offset-by-eight.column,
-  .offset-by-eight.columns {
-    margin-left: 69.3333333333%;
-  }
-  .offset-by-nine.column,
-  .offset-by-nine.columns {
-    margin-left: 78.0%;
-  }
-  .offset-by-ten.column,
-  .offset-by-ten.columns {
-    margin-left: 86.6666666667%;
-  }
-  .offset-by-eleven.column,
-  .offset-by-eleven.columns {
-    margin-left: 95.3333333333%;
-  }
-  .offset-by-one-third.column,
-  .offset-by-one-third.columns {
-    margin-left: 34.6666666667%;
-  }
-  .offset-by-two-thirds.column,
-  .offset-by-two-thirds.columns {
-    margin-left: 69.3333333333%;
-  }
-  .offset-by-one-half.column,
-  .offset-by-one-half.columns {
-    margin-left: 52%;
-  }
-}
-
-p {
-  margin-top: 0;
-}
-
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-a {
-  color: #1EAEDB;
-	text-align: center;
-}
-
-a:hover {
-  color: #0FA0CE;
-}
-
-
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0;
-}
-
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0;
-}
-
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB;
-}
-
-
-/* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea,
-select {
-  height: 38px;
-  padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box;
-}
-
-
-/* Removes awkward default styles on some inputs for iOS */
-
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-textarea {
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-  border: 1px solid #33C3F0;
-  outline: 0;
-}
-
-label,
-legend {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600;
-}
-
-fieldset {
-  padding: 0;
-  border-width: 0;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline;
-}
-
-label > .label-body {
-  display: inline-block;
-  margin-left: .5rem;
-  font-weight: normal;
-}
-
-
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-ul {
-  list-style: circle inside;
-  padding-top: 5px;
-}
-
-ol {
-  list-style: decimal inside;
-}
-
-ol,
 ul {
   padding-left: 0;
-  margin-top: 0;
 }
 
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
-}
-
-li {
-  margin-bottom: 0.3rem;
-}
-
-
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-button,
-.button {
-  margin-bottom: 1rem;
-}
-
-input,
-textarea,
-select,
-fieldset {
-  margin-bottom: 1.5rem;
-}
-
-pre,
-blockquote,
-dl,
-figure,
-table,
-p,
-ul,
-ol,
-form {
-  margin-bottom: 2.5rem;
-}
-
-
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.u-pull-right {
-  float: right;
-}
-
-.u-pull-left {
-  float: left;
-}
-
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid #E1E1E1;
-}
-
-
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-/* Self Clearing Goodness */
-
-.container:after,
-.row:after,
-.u-cf {
-  content: "";
+.cf:before,
+.cf:after {
+  content: " ";
   display: table;
+}
+
+.cf:after {
   clear: both;
 }
 
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
-
-/* ----------------------------------------- */
-/* Url: https://codepen.io/redbranchmedia/pen/exrsy */
-
-.block-wrapper {
-  margin: 5px auto 20px auto;
-  text-align: left;
-}
-
-.block-wrapper label {
-  padding: 0px 0px;
-  z-index: 20;
+.ir {
   display: block;
-  height: 20px;
-  cursor: pointer;
-  line-height: 30px;
-  font-weight: normal;
-  color: #1EAEDB;
-}
-
-.block-wrapper label:hover {
-  text-decoration: underline;
-}
-
-.block-wrapper input:checked + label,
-.block-wrapper input:checked + label:hover {}
-
-.block-wrapper input {
-  display: none;
-}
-
-.block-wrapper .block-content {
-  font-size: 14px;
-  margin-top: -1px;
+  width: 1px;
+  height: 1px;
+  text-indent: 100%;
+  white-space: nowrap;
   overflow: hidden;
-  height: 0px;
+}
+
+h1, .h1,
+h2, .h2 {
+  text-align: center;
+}
+
+h1, .h1 {
+  font-size: 3.8em;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2, .h2 {
+  color: #999;
+  font-size: 1.3em;
+  font-weight: normal;
+  font-family: "Bitter", Georgia, serif;
+  margin-top: 0;
+}
+
+h3, .h3 {
+  font-family: "Bitter", Georgia, serif;
+  font-size: 1.6em;
+  line-height: 1.2em;
+  margin-bottom: .2em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: .6em 0 1em;
+}
+
+a {
+  color: #4c4e50;
+}
+a:hover {
+  color: #007079;
+}
+a:active {
+  color: #005860;
+}
+
+.content-wrapper {
+  width: 100%;
+  padding: 0 5em;
+}
+.content-wrapper > div {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #e6e6e6;
+  padding: 5em 0;
+}
+#nav header, #nav ul {
+  width: 100%;
+}
+#nav header {
+  margin-bottom: 2em;
+}
+#nav ul {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 0;
+}
+#nav li {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin-right: .25em;
+}
+#nav li:last-child {
+  margin-right: 0;
+}
+#nav a {
+  display: block;
+  width: 2em;
+  height: 2em;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 999em;
+  background-color: #4c4e50;
+}
+#nav a:hover {
+  color: white;
+  background-color: #007079;
+}
+#nav a:active {
+  color: white;
+  background-color: #005860;
+}
+#nav i {
+  font-size: .8em;
+}
+
+#navSecondary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  background-color: #4c4e50;
+}
+#navSecondary .h1 {
+  color: #e6e6e6;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+#main {
   position: relative;
-  z-index: 10;
-  -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-  -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-  -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-  -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-  transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  z-index: 2;
+  padding-top: 4em;
+  background-color: #fafafa;
+  margin-top: 22em;
 }
 
-.block-wrapper input:checked ~ .block-content {
-  -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-  -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-  -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-  -ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-  transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+article {
+  position: relative;
+  padding-left: 5em;
+  padding-bottom: 4em;
+  border-bottom: solid 0.5em rgba(0, 0, 0, 0.1);
+  margin-bottom: 4em;
+}
+article:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+article h3 {
+  margin-top: 0;
+}
+article h3 a {
+  text-decoration: none;
 }
 
-.block-wrapper input:checked ~ .block-content {
+article aside {
+  display: block;
+  position: absolute;
+  top: .25em;
+  left: .5em;
+  width: 3em;
+}
+article aside .thumb {
+  display: block !important;
+  overflow: hidden;
+  width: 3em !important;
+  height: 3em !important;
+  font-family: FontAwesome;
+  content: attr(data-type);
+  color: white;
+  text-align: center;
+  line-height: 3em !important;
+  background-color: #007079;
+  border-radius: 4em;
+  box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+article aside .thumb img {
+  display: block;
+  width: 100%;
   height: auto;
 }
-  </style>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Northlang | Home</title>
-  <meta name="description" content="A programming language for everyone!">
-  <meta name="author" content="Timo Sarkar">
-<!--<link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>-->
-  <link href='https://fonts.googleapis.com/css?family=Gudea:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+article aside a.thumb:hover {
+  box-shadow: 0 0 0 0.5em rgba(64, 64, 64, 0.1);
+}
+article aside a.thumb:active {
+  box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0.1);
+}
+article aside time {
+  display: block;
+  color: #999;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: center;
+}
 
-  <!--[if lt IE 9]>
-  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
+article footer {
+  margin-top: 1em;
+}
+article footer a {
+  color: #4c4e50;
+  font-weight: bold;
+  font-family: "Bitter", Georgia, serif;
+  text-decoration: none;
+}
+article footer i {
+  font-weight: normal;
+  margin-right: .25em;
+}
 
-<body>
-  <style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto:900');
-  %clearfix {
-    &:after {
+#footer ul {
+  width: 50%;
+  float: left;
+}
+#footer li {
+  display: inline-block;
+  margin-right: .25em;
+}
+#footer li:last-child {
+  margin-right: 0;
+}
+#footer p {
+  text-align: right;
+}
+#footer a {
+  font-size: .9em;
+  text-decoration: none;
+}
+    </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:900');
+    %clearfix {
+      &:after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+    }
+
+    //colors
+    $q1: #3D0303;
+    $q2: #741937;
+    $q3: #A3254F;
+    $q4: #CB205B;
+    $q5: #EB265B;
+    $q6: #FF2A5B;
+    //animation
+    $delay: 1s;
+    $secondaryDelay: 2s;
+    $colorTime: 1s;
+    $iterations: 5;
+    .container {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      width: 100%;
+      height: 150px;
+      margin: 20vh auto;
+      font-weight: 900;
+      @extend %clearfix;
+    }
+
+    text {
+      animation: h1 1.5s 1.5s both ease-out;
+    }
+
+    @keyframes h1 {
+      0% {
+        opacity: 0;
+        transform: translateX(-60px);
+      }
+      100% {
+        transform: translate(-30px, 0px);
+      }
+    }
+
+    svg {
+      width: 50%;
+      min-width: 200px;
+      height: auto;
+      max-width: 500px;
+      animation: slideAndMinimize 1.5s both ease-in-out;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @keyframes slideAndMinimize {
+      0% {
+        transform: translate(30vw, 0px);
+      }
+      100% {
+        transform: translate(0px, 0px) scale(0.95);
+      }
+    }
+
+    #q1 {
+      transform-origin: 50% 10%;
+      animation: q1 $colorTime 1s $iterations both;
+    }
+    #g1 {
+      animation: g1 0.85s both ease-in-out;
+    }
+
+    #q2 {
+      transform-origin: 50% 10%;
+      animation: q2 $colorTime 1.2s $iterations both;
+    }
+    #g2 {
+      animation: g2 0.85s both ease-in-out;
+    }
+
+    #q3 {
+      transform-origin: 50% 10%;
+      animation: q3 $colorTime 1.4s $iterations both;
+    }
+    #g3 {
+      animation: g3 0.85s both ease-in-out;
+    }
+
+    #q4 {
+      transform-origin: 50% 10%;
+      animation: q4 $colorTime 1.6s $iterations both;
+    }
+    #g4 {
+      animation: g4 0.85s both ease-in-out;
+    }
+
+    #q5 {
+      transform-origin: 50% 10%;
+      animation: q5 $colorTime 1.8s $iterations both;
+    }
+
+    #g5 {
+      animation: g5 0.85s both ease-in-out;
+    }
+
+    #q6 {
+      transform-origin: 50% 10%;
+      animation: q6 $colorTime 1.5s $iterations both;
+    }
+    #g6 {
+      animation: g6 0.85s both ease-in-out;
+    }
+
+    @keyframes q1 {
+
+      33.33% {
+        fill: lighten($q1, 15%);
+      }
+      66.66% {
+        fill: lighten($q1, 8%);
+      }
+      99.99% {
+        fill: $q1;
+      }
+    }
+
+    @keyframes q2 {
+
+      33.33% {
+        fill: darken($q2, 15%);
+      }
+      66.66% {
+        fill: lighten($q2, 10%);
+      }
+      99.99% {
+        fill: $q2;
+      }
+
+    }
+    @keyframes g1 {
+      0% {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes g2 {
+      0% {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes q3 {
+
+      33.33% {
+        fill: darken($q3, 15%);
+      }
+      66.66% {
+        fill: lighten($q3, 10%);
+      }
+      99.99% {
+        fill: $q3;
+      }
+
+    }
+    @keyframes g3 {
+      0% {
+        transform: rotate(135deg);
+        opacity: 0;
+      }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes q4 {
+
+      33.33% {
+        fill: darken($q4, 15%);
+      }
+      66.66% {
+        fill: lighten($q4, 10%);
+      }
+      99.99% {
+        fill: $q4;
+      }
+
+    }
+
+    @keyframes g4 {
+      0% {
+        transform: rotate(180deg);
+        opacity: 0;
+      }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes q5 {
+
+      33.33% {
+        fill: darken($q5, 15%);
+      }
+      66.66% {
+        fill: lighten($q5, 10%);
+      }
+      99.99% {
+        fill: $q5;
+      }
+
+    }
+    @keyframes g5 {
+      0% {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes q6 {
+
+      33.33% {
+        fill: darken($q6, 15%);
+      }
+      66.66% {
+        fill: lighten($q6, 10%);
+      }
+      99.99% {
+        fill: $q6;
+      }
+
+    }
+
+    @keyframes g6 {
+      0% {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @import url("https://fonts.googleapis.com/css?family=Roboto:900");
+    .container:after {
       content: " ";
       display: block;
       clear: both;
     }
-  }
 
-  //colors
-  $q1: #3D0303;
-  $q2: #741937;
-  $q3: #A3254F;
-  $q4: #CB205B;
-  $q5: #EB265B;
-  $q6: #FF2A5B;
-  //animation
-  $delay: 1s;
-  $secondaryDelay: 2s;
-  $colorTime: 1s;
-  $iterations: 5;
-  .container {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    width: 100%;
-    height: 150px;
-    margin: 20vh auto;
-    font-weight: 900;
-    @extend %clearfix;
-  }
-
-  text {
-    animation: h1 1.5s 1.5s both ease-out;
-  }
-
-  @keyframes h1 {
-    0% {
-      opacity: 0;
-      transform: translateX(-60px);
-    }
-    100% {
-      transform: translate(-30px, 0px);
-    }
-  }
-
-  svg {
-    width: 50%;
-    min-width: 200px;
-    height: auto;
-    max-width: 500px;
-    animation: slideAndMinimize 1.5s both ease-in-out;
-    display: block;
-    margin: 0 auto;
-  }
-
-  @keyframes slideAndMinimize {
-    0% {
-      transform: translate(30vw, 0px);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(0.95);
-    }
-  }
-
-  #q1 {
-    transform-origin: 50% 10%;
-    animation: q1 $colorTime 1s $iterations both;
-  }
-  #g1 {
-    animation: g1 0.85s both ease-in-out;
-  }
-
-  #q2 {
-    transform-origin: 50% 10%;
-    animation: q2 $colorTime 1.2s $iterations both;
-  }
-  #g2 {
-    animation: g2 0.85s both ease-in-out;
-  }
-
-  #q3 {
-    transform-origin: 50% 10%;
-    animation: q3 $colorTime 1.4s $iterations both;
-  }
-  #g3 {
-    animation: g3 0.85s both ease-in-out;
-  }
-
-  #q4 {
-    transform-origin: 50% 10%;
-    animation: q4 $colorTime 1.6s $iterations both;
-  }
-  #g4 {
-    animation: g4 0.85s both ease-in-out;
-  }
-
-  #q5 {
-    transform-origin: 50% 10%;
-    animation: q5 $colorTime 1.8s $iterations both;
-  }
-
-  #g5 {
-    animation: g5 0.85s both ease-in-out;
-  }
-
-  #q6 {
-    transform-origin: 50% 10%;
-    animation: q6 $colorTime 1.5s $iterations both;
-  }
-  #g6 {
-    animation: g6 0.85s both ease-in-out;
-  }
-
-  @keyframes q1 {
-
-    33.33% {
-      fill: lighten($q1, 15%);
-    }
-    66.66% {
-      fill: lighten($q1, 8%);
-    }
-    99.99% {
-      fill: $q1;
-    }
-  }
-
-  @keyframes q2 {
-
-    33.33% {
-      fill: darken($q2, 15%);
-    }
-    66.66% {
-      fill: lighten($q2, 10%);
-    }
-    99.99% {
-      fill: $q2;
+    .container {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      width: 100%;
+      height: 150px;
+      font-weight: 900;
     }
 
-  }
-  @keyframes g1 {
-    0% {
-      transform: rotate(90deg);
-      opacity: 0;
-    }
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes g2 {
-    0% {
-      transform: rotate(90deg);
-      opacity: 0;
-    }
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes q3 {
-
-    33.33% {
-      fill: darken($q3, 15%);
-    }
-    66.66% {
-      fill: lighten($q3, 10%);
-    }
-    99.99% {
-      fill: $q3;
+    text {
+      -webkit-animation: h1 1.5s 1.5s both ease-out;
+              animation: h1 1.5s 1.5s both ease-out;
     }
 
-  }
-  @keyframes g3 {
-    0% {
-      transform: rotate(135deg);
-      opacity: 0;
-    }
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-
-  @keyframes q4 {
-
-    33.33% {
-      fill: darken($q4, 15%);
-    }
-    66.66% {
-      fill: lighten($q4, 10%);
-    }
-    99.99% {
-      fill: $q4;
+    @-webkit-keyframes h1 {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60px);
+                transform: translateX(-60px);
+      }
+      100% {
+        -webkit-transform: translate(-30px, 0px);
+                transform: translate(-30px, 0px);
+      }
     }
 
-  }
-
-  @keyframes g4 {
-    0% {
-      transform: rotate(180deg);
-      opacity: 0;
+    @keyframes h1 {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60px);
+                transform: translateX(-60px);
+      }
+      100% {
+        -webkit-transform: translate(-30px, 0px);
+                transform: translate(-30px, 0px);
+      }
     }
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes q5 {
-
-    33.33% {
-      fill: darken($q5, 15%);
-    }
-    66.66% {
-      fill: lighten($q5, 10%);
-    }
-    99.99% {
-      fill: $q5;
+    svg {
+      width: 50%;
+      min-width: 200px;
+      height: auto;
+      max-width: 500px;
+      -webkit-animation: slideAndMinimize 1.5s both ease-in-out;
+              animation: slideAndMinimize 1.5s both ease-in-out;
+      display: block;
+      margin: 0 auto;
     }
 
-  }
-  @keyframes g5 {
-    0% {
-      transform: rotate(90deg);
-      opacity: 0;
-    }
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-
-  @keyframes q6 {
-
-    33.33% {
-      fill: darken($q6, 15%);
-    }
-    66.66% {
-      fill: lighten($q6, 10%);
-    }
-    99.99% {
-      fill: $q6;
+    @-webkit-keyframes slideAndMinimize {
+      0% {
+        -webkit-transform: translate(30vw, 0px);
+                transform: translate(30vw, 0px);
+      }
+      100% {
+        -webkit-transform: translate(0px, 0px) scale(0.95);
+                transform: translate(0px, 0px) scale(0.95);
+      }
     }
 
-  }
-
-  @keyframes g6 {
-    0% {
-      transform: rotate(90deg);
-      opacity: 0;
+    @keyframes slideAndMinimize {
+      0% {
+        -webkit-transform: translate(30vw, 0px);
+                transform: translate(30vw, 0px);
+      }
+      100% {
+        -webkit-transform: translate(0px, 0px) scale(0.95);
+                transform: translate(0px, 0px) scale(0.95);
+      }
+    }
+    #q1 {
+      -webkit-transform-origin: 50% 10%;
+              transform-origin: 50% 10%;
+      -webkit-animation: q1 1s 1s 5 both;
+              animation: q1 1s 1s 5 both;
     }
 
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
+    #g1 {
+      -webkit-animation: g1 0.85s both ease-in-out;
+              animation: g1 0.85s both ease-in-out;
     }
-  }
-  @import url("https://fonts.googleapis.com/css?family=Roboto:900");
-  .container:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
 
-  .container {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    width: 100%;
-    height: 150px;
-    margin: 20vh auto;
-    font-weight: 900;
-  }
+    #q2 {
+      -webkit-transform-origin: 50% 10%;
+              transform-origin: 50% 10%;
+      -webkit-animation: q2 1s 1.2s 5 both;
+              animation: q2 1s 1.2s 5 both;
+    }
 
-  text {
-    -webkit-animation: h1 1.5s 1.5s both ease-out;
-            animation: h1 1.5s 1.5s both ease-out;
-  }
+    #g2 {
+      -webkit-animation: g2 0.85s both ease-in-out;
+              animation: g2 0.85s both ease-in-out;
+    }
 
-  @-webkit-keyframes h1 {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-60px);
-              transform: translateX(-60px);
+    #q3 {
+      -webkit-transform-origin: 50% 10%;
+              transform-origin: 50% 10%;
+      -webkit-animation: q3 1s 1.4s 5 both;
+              animation: q3 1s 1.4s 5 both;
     }
-    100% {
-      -webkit-transform: translate(-30px, 0px);
-              transform: translate(-30px, 0px);
-    }
-  }
 
-  @keyframes h1 {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-60px);
-              transform: translateX(-60px);
+    #g3 {
+      -webkit-animation: g3 0.85s both ease-in-out;
+              animation: g3 0.85s both ease-in-out;
     }
-    100% {
-      -webkit-transform: translate(-30px, 0px);
-              transform: translate(-30px, 0px);
-    }
-  }
-  svg {
-    width: 50%;
-    min-width: 200px;
-    height: auto;
-    max-width: 500px;
-    -webkit-animation: slideAndMinimize 1.5s both ease-in-out;
-            animation: slideAndMinimize 1.5s both ease-in-out;
-    display: block;
-    margin: 0 auto;
-  }
 
-  @-webkit-keyframes slideAndMinimize {
-    0% {
-      -webkit-transform: translate(30vw, 0px);
-              transform: translate(30vw, 0px);
+    #q4 {
+      -webkit-transform-origin: 50% 10%;
+              transform-origin: 50% 10%;
+      -webkit-animation: q4 1s 1.6s 5 both;
+              animation: q4 1s 1.6s 5 both;
     }
-    100% {
-      -webkit-transform: translate(0px, 0px) scale(0.95);
-              transform: translate(0px, 0px) scale(0.95);
-    }
-  }
 
-  @keyframes slideAndMinimize {
-    0% {
-      -webkit-transform: translate(30vw, 0px);
-              transform: translate(30vw, 0px);
+    #g4 {
+      -webkit-animation: g4 0.85s both ease-in-out;
+              animation: g4 0.85s both ease-in-out;
     }
-    100% {
-      -webkit-transform: translate(0px, 0px) scale(0.95);
-              transform: translate(0px, 0px) scale(0.95);
-    }
-  }
-  #q1 {
-    -webkit-transform-origin: 50% 10%;
-            transform-origin: 50% 10%;
-    -webkit-animation: q1 1s 1s 5 both;
-            animation: q1 1s 1s 5 both;
-  }
 
-  #g1 {
-    -webkit-animation: g1 0.85s both ease-in-out;
-            animation: g1 0.85s both ease-in-out;
-  }
+    #q5 {
+      -webkit-transform-origin: 50% 10%;
+              transform-origin: 50% 10%;
+      -webkit-animation: q5 1s 1.8s 5 both;
+              animation: q5 1s 1.8s 5 both;
+    }
 
-  #q2 {
-    -webkit-transform-origin: 50% 10%;
-            transform-origin: 50% 10%;
-    -webkit-animation: q2 1s 1.2s 5 both;
-            animation: q2 1s 1.2s 5 both;
-  }
+    #g5 {
+      -webkit-animation: g5 0.85s both ease-in-out;
+              animation: g5 0.85s both ease-in-out;
+    }
 
-  #g2 {
-    -webkit-animation: g2 0.85s both ease-in-out;
-            animation: g2 0.85s both ease-in-out;
-  }
+    #q6 {
+      -webkit-transform-origin: 50% 10%;
+              transform-origin: 50% 10%;
+      -webkit-animation: q6 1s 1.5s 5 both;
+              animation: q6 1s 1.5s 5 both;
+    }
 
-  #q3 {
-    -webkit-transform-origin: 50% 10%;
-            transform-origin: 50% 10%;
-    -webkit-animation: q3 1s 1.4s 5 both;
-            animation: q3 1s 1.4s 5 both;
-  }
+    #g6 {
+      -webkit-animation: g6 0.85s both ease-in-out;
+              animation: g6 0.85s both ease-in-out;
+    }
 
-  #g3 {
-    -webkit-animation: g3 0.85s both ease-in-out;
-            animation: g3 0.85s both ease-in-out;
-  }
+    @-webkit-keyframes q1 {
+      33.33% {
+        fill: #860707;
+      }
+      66.66% {
+        fill: #640505;
+      }
+      99.99% {
+        fill: #3D0303;
+      }
+    }
 
-  #q4 {
-    -webkit-transform-origin: 50% 10%;
-            transform-origin: 50% 10%;
-    -webkit-animation: q4 1s 1.6s 5 both;
-            animation: q4 1s 1.6s 5 both;
-  }
+    @keyframes q1 {
+      33.33% {
+        fill: #860707;
+      }
+      66.66% {
+        fill: #640505;
+      }
+      99.99% {
+        fill: #3D0303;
+      }
+    }
+    @-webkit-keyframes q2 {
+      33.33% {
+        fill: #350b19;
+      }
+      66.66% {
+        fill: #9e224b;
+      }
+      99.99% {
+        fill: #741937;
+      }
+    }
+    @keyframes q2 {
+      33.33% {
+        fill: #350b19;
+      }
+      66.66% {
+        fill: #9e224b;
+      }
+      99.99% {
+        fill: #741937;
+      }
+    }
+    @-webkit-keyframes g1 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes g1 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes g2 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes g2 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes q3 {
+      33.33% {
+        fill: #651731;
+      }
+      66.66% {
+        fill: #cd2e63;
+      }
+      99.99% {
+        fill: #A3254F;
+      }
+    }
+    @keyframes q3 {
+      33.33% {
+        fill: #651731;
+      }
+      66.66% {
+        fill: #cd2e63;
+      }
+      99.99% {
+        fill: #A3254F;
+      }
+    }
+    @-webkit-keyframes g3 {
+      0% {
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes g3 {
+      0% {
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes q4 {
+      33.33% {
+        fill: #89163d;
+      }
+      66.66% {
+        fill: #e03e76;
+      }
+      99.99% {
+        fill: #CB205B;
+      }
+    }
+    @keyframes q4 {
+      33.33% {
+        fill: #89163d;
+      }
+      66.66% {
+        fill: #e03e76;
+      }
+      99.99% {
+        fill: #CB205B;
+      }
+    }
+    @-webkit-keyframes g4 {
+      0% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes g4 {
+      0% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes q5 {
+      33.33% {
+        fill: #b4113d;
+      }
+      66.66% {
+        fill: #ef557e;
+      }
+      99.99% {
+        fill: #EB265B;
+      }
+    }
+    @keyframes q5 {
+      33.33% {
+        fill: #b4113d;
+      }
+      66.66% {
+        fill: #ef557e;
+      }
+      99.99% {
+        fill: #EB265B;
+      }
+    }
+    @-webkit-keyframes g5 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes g5 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes q6 {
+      33.33% {
+        fill: #dd0033;
+      }
+      66.66% {
+        fill: #ff5d82;
+      }
+      99.99% {
+        fill: #FF2A5B;
+      }
+    }
+    @keyframes q6 {
+      33.33% {
+        fill: #dd0033;
+      }
+      66.66% {
+        fill: #ff5d82;
+      }
+      99.99% {
+        fill: #FF2A5B;
+      }
+    }
+    @-webkit-keyframes g6 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes g6 {
+      0% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
 
-  #g4 {
-    -webkit-animation: g4 0.85s both ease-in-out;
-            animation: g4 0.85s both ease-in-out;
-  }
+    #a {
+      color: dodgerblue;
+    }
+    </style>
+</head>
+<body>
+<nav id="nav" class="content-wrapper">
+  <div class="cf">
+    <header>
+      <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="936" height="341" viewBox="502 211 936 341">
+          <g id="polygonIcon" fill="none" fill-rule="evenodd" transform="translate(502 211)">
+          <g id="g6">
+          <polygon id="q6" class="g6" fill="#FF2A5B" points="97.259153 284.94008 .82385 190.016862 97.259153 190.016862"/>
+          </g>
+          <g id="g5">
+          <polygon id="q5" fill="#EB265B" points="1.035678 95.157262 97.259153 190.016862 .804642 190.016862"/>
+          </g>
+          <g id="g4">
+          <polygon id="q4" fill="#CB205B" points="97.008099 189.925251 .804642 95.074724 96.9386 95.074724"/>
+          </g>
+          <g id="g3">
+          <polygon id="q3" fill="#A3254F" points="96.9386 190.016862 193.470196 95.100053 96.9386 95.074724"/>
+          </g>
+          <g id="g2"><polygon id="q2" fill="#741937" points="96.9386 .107808 193.524762 95.074724 96.9386 95.074724"/>
+          </g>
+          <g id="g1">
+          <polygon id="q1" fill="#3D0303" points="96.9386 .096882 96.9386 95.074724 .804642 95.074724"/>
+          </g>
+          <text id="Polygon" fill="#010101" font-family="Roboto-Black, Roboto" font-size="200" font-weight="700">
+            <tspan x="193.470196" y="291.287065" style="font-family: consol; font-style: italic; font-size: ; text-align: center;">North</tspan>
+          </text>
+          </g>
+        </svg>
+<p>A programming language for everybody</p>
 
-  #q5 {
-    -webkit-transform-origin: 50% 10%;
-            transform-origin: 50% 10%;
-    -webkit-animation: q5 1s 1.8s 5 both;
-            animation: q5 1s 1.8s 5 both;
-  }
-
-  #g5 {
-    -webkit-animation: g5 0.85s both ease-in-out;
-            animation: g5 0.85s both ease-in-out;
-  }
-
-  #q6 {
-    -webkit-transform-origin: 50% 10%;
-            transform-origin: 50% 10%;
-    -webkit-animation: q6 1s 1.5s 5 both;
-            animation: q6 1s 1.5s 5 both;
-  }
-
-  #g6 {
-    -webkit-animation: g6 0.85s both ease-in-out;
-            animation: g6 0.85s both ease-in-out;
-  }
-
-  @-webkit-keyframes q1 {
-    33.33% {
-      fill: #860707;
-    }
-    66.66% {
-      fill: #640505;
-    }
-    99.99% {
-      fill: #3D0303;
-    }
-  }
-
-  @keyframes q1 {
-    33.33% {
-      fill: #860707;
-    }
-    66.66% {
-      fill: #640505;
-    }
-    99.99% {
-      fill: #3D0303;
-    }
-  }
-  @-webkit-keyframes q2 {
-    33.33% {
-      fill: #350b19;
-    }
-    66.66% {
-      fill: #9e224b;
-    }
-    99.99% {
-      fill: #741937;
-    }
-  }
-  @keyframes q2 {
-    33.33% {
-      fill: #350b19;
-    }
-    66.66% {
-      fill: #9e224b;
-    }
-    99.99% {
-      fill: #741937;
-    }
-  }
-  @-webkit-keyframes g1 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes g1 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes g2 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes g2 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes q3 {
-    33.33% {
-      fill: #651731;
-    }
-    66.66% {
-      fill: #cd2e63;
-    }
-    99.99% {
-      fill: #A3254F;
-    }
-  }
-  @keyframes q3 {
-    33.33% {
-      fill: #651731;
-    }
-    66.66% {
-      fill: #cd2e63;
-    }
-    99.99% {
-      fill: #A3254F;
-    }
-  }
-  @-webkit-keyframes g3 {
-    0% {
-      -webkit-transform: rotate(135deg);
-              transform: rotate(135deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes g3 {
-    0% {
-      -webkit-transform: rotate(135deg);
-              transform: rotate(135deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes q4 {
-    33.33% {
-      fill: #89163d;
-    }
-    66.66% {
-      fill: #e03e76;
-    }
-    99.99% {
-      fill: #CB205B;
-    }
-  }
-  @keyframes q4 {
-    33.33% {
-      fill: #89163d;
-    }
-    66.66% {
-      fill: #e03e76;
-    }
-    99.99% {
-      fill: #CB205B;
-    }
-  }
-  @-webkit-keyframes g4 {
-    0% {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes g4 {
-    0% {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes q5 {
-    33.33% {
-      fill: #b4113d;
-    }
-    66.66% {
-      fill: #ef557e;
-    }
-    99.99% {
-      fill: #EB265B;
-    }
-  }
-  @keyframes q5 {
-    33.33% {
-      fill: #b4113d;
-    }
-    66.66% {
-      fill: #ef557e;
-    }
-    99.99% {
-      fill: #EB265B;
-    }
-  }
-  @-webkit-keyframes g5 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes g5 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes q6 {
-    33.33% {
-      fill: #dd0033;
-    }
-    66.66% {
-      fill: #ff5d82;
-    }
-    99.99% {
-      fill: #FF2A5B;
-    }
-  }
-  @keyframes q6 {
-    33.33% {
-      fill: #dd0033;
-    }
-    66.66% {
-      fill: #ff5d82;
-    }
-    99.99% {
-      fill: #FF2A5B;
-    }
-  }
-  @-webkit-keyframes g6 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes g6 {
-    0% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      opacity: 1;
-    }
-  }
-  </style>
-  <div id="header">
-  <div class="container">
-    <svg xmlns="http://www.w3.org/2000/svg" width="936" height="341" viewBox="502 211 936 341">
-      <g id="polygonIcon" fill="none" fill-rule="evenodd" transform="translate(502 211)">
-      <g id="g6">
-      <polygon id="q6" class="g6" fill="#FF2A5B" points="97.259153 284.94008 .82385 190.016862 97.259153 190.016862"/>
-      </g>
-      <g id="g5">
-      <polygon id="q5" fill="#EB265B" points="1.035678 95.157262 97.259153 190.016862 .804642 190.016862"/>
-      </g>
-      <g id="g4">
-      <polygon id="q4" fill="#CB205B" points="97.008099 189.925251 .804642 95.074724 96.9386 95.074724"/>
-      </g>
-      <g id="g3">
-      <polygon id="q3" fill="#A3254F" points="96.9386 190.016862 193.470196 95.100053 96.9386 95.074724"/>
-      </g>
-      <g id="g2"><polygon id="q2" fill="#741937" points="96.9386 .107808 193.524762 95.074724 96.9386 95.074724"/>
-      </g>
-      <g id="g1">
-      <polygon id="q1" fill="#3D0303" points="96.9386 .096882 96.9386 95.074724 .804642 95.074724"/>
-      </g>
-      <text id="Polygon" fill="#010101" font-family="Roboto-Black, Roboto" font-size="200" font-weight="700">
-        <tspan x="193.470196" y="291.287065" style="font-family: consol; font-style: italic; font-size: ; text-align: center;">North</tspan>
-      </text>
-      </g>
-    </svg>
-    <br></br>
+      </div>
+    </header>
 
   </div>
+</nav>
 
-
-<button style="background-color: skyblue; margin-left: 520px; text-align: center; border-color: skyblue; border-radius: 5px;	">Install north v.0.0.1</button>
-<!-- .container is main centered wrapper -->
-<h3 style="text-align: center;">Everyone can create software</h3>
-<p style="text-align: center; font-family: consolas;">The north programming language is a object-oriented language<br> that is specialiced for webdesign. With North you're allowed <br>  to turn your code into beautiful app desgins.</p>
-
-<br></br>
-<hr>
+<div id="navSecondary" class="content-wrapper">
+  <div>
+    <a href="#" class="h1">Colby Fayock</a>
+  </div>
 </div>
-<div id="main" align=" center"  >
-  <style>
-  header {
-    background-color: #30322f;
 
+<main id="main" class="content-wrapper">
+  <div>
+    <article>
+
+      <h3 style="text-decoration: none;">
+        <a href="#">
+          The north programming language is a object-oriented language
+that is specialiced for webdesign. With North you're allowed
+to turn your code into beautiful app desgins.
+        </a>
+      </h3>
+      <footer>
+        <a href="#">
+          <i class="icon-link"></i>
+          Install version 0.0.1
+        </a>
+      </footer>
+    </article>
+    <article>
+      <aside>
+        Code:
+
+      </aside>
+      <img src="https://raw.githubusercontent.com/north-lang/north-lang.github.io/master/carbon.png" style="height: 400px;"></img>
+      <p>Created this script with the need to produce elegant and fast web-apps. Simple and aweful syntax.</p>
+
+    </article>
+    <article>
+      <aside>
+
+        <p>Result:</p>
+      </aside>
+      <img src="https://raw.githubusercontent.com/north-lang/north-lang.github.io/master/screen.png" style="height: 300px;"></img>
+      <p>Awesome little web-apps with zero style and css-configuration. Web-included strong, encrypted databases such FireBase.</p>
+      <footer>
+        <a href="http://github.com/north-lang" id="a">
+
+          North on GitHub
+        </a>
+      </footer>
+    </article>
+  </div>
+  <footer id="footer" class="content-wrapper">
+    <div>
+      <ul class="footer_left">
+        <li>
+          <a href="http://github.com/north-lang/north-ndk">About</a>
+        </li>
+        <li>
+          <a href="http://github.com/north-lang/north-ndk">Install</a>
+        </li>
+      </ul>
+      <p class="footer_right" id="a">
+        &copy; <a href="http://timo-cmd.github.io" id="a">Timo Sarkar</a>
+      </p>
+    </div>
+  </footer>
+</main>
+
+<script>
+  $('a').click(function(){return false;});
+
+var nav, scrollTop,
+    win = $(window);
+
+nav = {
+  nav: $('#nav'),
+  setTop: function(top) {
+    this.nav.css('-webkit-transform', 'matrix(1, 0, 0, 1, 0, -' + Math.round(top/2) + ')');
   }
-  #header {
-    background-color: #30322f;
+};
 
-  }
-  #header .body {
-    background-color: white;
-  }
-
-  hr {
-    width: 860px;
-    color: whitesmoke
-  }
-
-  #main {
-    width: 800px;
-    padding-left: 200px;
-  }
-
-
-  </style>
-<h3>Example App made with North</h3>
-<br>
-<p>Code:</p>
-<img src="https://raw.githubusercontent.com/north-lang/north-lang.github.io/master/carbon.png" style="height: 530px; border-radius: 5px;"></img>
-<br></br>
-<p>Result:</p>
-<img src="https://raw.githubusercontent.com/north-lang/north-lang.github.io/master/screen.png" style="height: 390px; border-radius: 5px;"></img>
-</div>
-</br></br>
-
-<footer>
-  <a href="github" style="text-align: center; color: dodgerblue; margin-left: 530px;">Follow north on github.io</a>
-  <a href="github" style="text-align: center; color: dodgerblue; margin-left: 530px;">See technical documentation</a>
-  <p style="margin-left: 500px;">north lang created by Timo Sarkar</p>
-</footer>
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+win.scroll(function(){
+  scrollTop = win.scrollTop();
+  nav.setTop(scrollTop);
+});
+  </script>
 </body>
 </html>
